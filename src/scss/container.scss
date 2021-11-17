@@ -1,0 +1,51 @@
+.container {
+  width: calc(100% - 200px);
+  height: 100vh;
+  padding: 30px 80px;
+
+  &__head {
+    @include flexBetween;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    height: 80%;
+
+    .inputs {
+      height: 40%;
+    }
+
+    .options {
+      @include flexEvenly;
+      gap: 15px;
+      margin: 20px 0 100px 0;
+
+      .input {
+        width: calc(100% / 3);
+      }
+    }
+
+    .hospitals {
+      max-height: 60%;
+      max-width: 100%;
+      overflow: scroll;
+
+      .row {
+        width: 100%;
+        @include flexEvenly;
+        gap: 25px;
+        margin: 20px 0;
+
+        &__head {
+          letter-spacing: 1px;
+          font-weight: 600;
+        }
+
+        p {
+          width: calc(100% / 5);
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
